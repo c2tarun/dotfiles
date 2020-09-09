@@ -96,6 +96,7 @@ set background=dark
 
 source $HOME/.vim/plug_config/fzf.vim
 source $HOME/.vim/plug_config/coc.vim
+source $HOME/.vim/plug_config/signify.vim
 
 let @f='vi{ f'
 let @b="F'r`f'r`"
