@@ -5,7 +5,7 @@ set shiftwidth=2                        " Change the number of space characters 
 set expandtab                           " Converts tabs to spaces
 set smartindent                         " Makes indenting smart
 set noerrorbells
-set nu
+set rnu
 set nowrap                              " Display long lines as just one line
 set noswapfile
 set nobackup                            " This is recommended by coc
@@ -52,6 +52,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'vim-airline/vim-airline'
   Plug 'jiangmiao/auto-pairs'
   Plug 'mhinz/vim-signify'
+  Plug 'liuchengxu/vista.vim'
 
 call plug#end()
 
@@ -100,3 +101,10 @@ source $HOME/.vim/plug_config/signify.vim
 
 let @f='vi{ f'
 let @b="F'r`f'r`"
+
+" Vista {{{
+let g:vista_echo_cursor_strategy = "floating_win"
+let g:vista_default_executive = "coc"
+" }}}
+
+noremap <leader>o :Vista finder coc<CR>
