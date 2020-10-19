@@ -5,7 +5,7 @@ set shiftwidth=2                        " Change the number of space characters 
 set expandtab                           " Converts tabs to spaces
 set smartindent                         " Makes indenting smart
 set noerrorbells
-set rnu
+set number relativenumber
 set nowrap                              " Display long lines as just one line
 set noswapfile
 set nobackup                            " This is recommended by coc
@@ -53,6 +53,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'jiangmiao/auto-pairs'
   Plug 'mhinz/vim-signify'
   Plug 'liuchengxu/vista.vim'
+  Plug 'preservim/nerdcommenter'
 
 call plug#end()
 
@@ -108,3 +109,7 @@ let g:vista_default_executive = "coc"
 " }}}
 
 noremap <leader>o :Vista finder coc<CR>
+" Setting up prettier command
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
+vnoremap <leader>p "_dP
+vnoremap <leader>y "+y
